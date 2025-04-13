@@ -1,4 +1,4 @@
-:root {
+* :root {
     --NavColor: #ffb21d;
     --NavDisplay: #600796;
     --NavLetter: #110024;
@@ -10,20 +10,19 @@
 body {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    background-image: var(--BackgroundGradiaent);
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-}
-
-.Contenido {
-    width: 100%;
-    height: 250px;
-}
-
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  /* Ajustes opcionales para el logo */
+  .footer-logo {
+    max-width: 150px;
+    height: auto;
+  }
+  
 footer {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background-color: #818080;
+    background-color: var(--NavLetter)
 }

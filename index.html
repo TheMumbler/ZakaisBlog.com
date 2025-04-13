@@ -1,66 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zakai's Blog</title>
-    <script src="https://kit.fontawesome.com/fc962e391d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zakai's Blog</title>
+  <script src="https://kit.fontawesome.com/fc962e391d.js" crossorigin="anonymous"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="styles/EstiloNav.css">
-    <link rel="stylesheet" href="styles/content.css">
-
+  <link rel="stylesheet" href="styles/EstiloNav.css" />
+  <link rel="stylesheet" href="styles/content.css" />
 </head>
 
-<body>
-    <!-- BARRA DE NAVEGACION -->
-
+<body class="d-flex flex-column min-vh-100">
+  <!-- NAVIGATION -->
+  <main class="flex-fill">
     <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <a href="" onclick="cargarPagina('../pages/home.html')" class="enlace">
-            <img src="image/logo zakai blog.jpg" class="navbar-logo">
-        </a>
-        <ul>
-            <li>
-                <i class="fa-solid fa-house"></i>
-                <a href="#" onclick="cargarPagina('../pages/home.html')">Home</a>
-            </li>
-
-            <li>
-                <i class="fa-solid fa-bi bi-bookmark-star-fill"></i>
-                <a href="#" onclick="cargarPagina('../pages/blog.html')">Blog</a>
-            </li>
-
-
-            <li>
-                <i class="fa-brands fa-bi bi-bag-heart-fill"></i>
-                <a href="#" onclick="cargarPagina('../pages/shop.html')">Shop</a>
-            </li>
-
-            <li>
-                <i class="fa-solid fa-address-card"></i>
-                <a href="#" onclick="cargarPagina('../pages/contact.html')">Contact</a>
-            </li>
-
-        </ul>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+      <a href="" onclick="cargarPagina('../pages/home.html')" class="enlace">
+        <img src="image/logo zakai blog.jpg" class="navbar-logo" />
+      </a>
+      <ul>
+        <li><i class="fa-solid fa-house"></i><a href="#" onclick="cargarPagina('../pages/home.html')">Home</a></li>
+        <li><i class="fa-solid fa-bookmark"></i><a href="#" onclick="cargarPagina('../pages/blog.html')">Blog</a></li>
+        <li><i class="fa-solid fa-bag-shopping"></i><a href="#" onclick="cargarPagina('../pages/shop.html')">Shop</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a href="#" onclick="cargarPagina('../pages/contact.html')">Contact</a></li>
+      </ul>
     </nav>
+  </main>
 
-    <div class="Contenido" id="contenido">
-            <script src="./js/script.js"></script>
+  <!-- CONTENIDO -->
+  <div class="Contenido" id="contenido">
+    <script src="./js/script.js"></script>
+  </div>
+
+ <!-- TODO LO DEL FOOTER -->
+
+  <footer class="footer text-light pt-5 pb-4 mt-auto">
+    <div class="container">
+      <div class="row justify-content-center text-start gy-4">
+  
+        <!-- Logo + Contact Info -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="mb-3">
+            <a href="#" onclick="cargarPagina('../pages/home.html')">
+              <img src="image/logo zakai blog.jpg" class="footer-logo mb-3" style="max-width: 150px;" />
+            </a>
+            <h5 class="text-uppercase fw-bold">Contacts</h5>
+          </div>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <i class="bi bi-envelope-fill me-2 fs-5"></i>
+              <a href="mailto:ZAsCONTACT@gmail.com" class="text-light text-decoration-none">ZAsCONTACT@gmail.com</a>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="bi bi-whatsapp me-2 fs-5"></i>
+              <a href="#" class="text-light text-decoration-none">+1 489 (849-194)</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Menu -->
+        <div class="col-6 col-md-3 col-lg-3 d-flex flex-column">
+          <h6 class="text-uppercase fw-bold mb-3">Menu</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Blog</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Shop</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social Media -->
+        <div class="col-6 col-md-3 col-lg-3 d-flex flex-column">
+          <h6 class="text-uppercase fw-bold mb-3">Follow us</h6>
+          <div>
+            <a href="#" class="text-light me-3 fs-5"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-light me-3 fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light me-3 fs-5"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="text-center pt-4 mt-4 border-top">
+        <p class="mb-0">&copy; ZK's & INC. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
+  
 
-    </body>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Aqui va todo lo del footer -->
-
-<footer>
-    <p>Espacio para las redes sociales, enlaces y otros.........</p>
-</footer>
-
+</body>
 </html>

@@ -41,10 +41,11 @@ section[id] {
 }
 
 .navbar-logo {
-    margin-top: 5px;
+    
     max-width: 100%;
-    height: auto;
-    max-height: 50px;
+    max-height: 50%;
+    max-width: 70pt;
+    margin-left: 30%;
 }
 
 nav ul {
@@ -92,6 +93,7 @@ li i:hover {
     margin-right: 40px;
     cursor: pointer;
     display: none;
+    margin-right: 10%;
 }
 
 #check {
@@ -189,5 +191,3 @@ li i:hover {
 .btn-scrolltop-on {
     transform: translateY(0);
 }
-
-/* ---------------------------- */
