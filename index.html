@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fc962e391d.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/EstiloNav.css">
+    <link rel="stylesheet" href="styles/content.css">
+
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGACION -->
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="" onclick="cargarPagina('../pages/home.html')" class="enlace">
+            <img src="image/logo zakai blog.jpg" class="navbar-logo">
+        </a>
+        <ul>
+            <li>
+                <i class="fa-solid fa-house"></i>
+                <a href="#" onclick="cargarPagina('../pages/home.html')">Home</a>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-bi bi-bookmark-star-fill"></i>
+                <a href="#" onclick="cargarPagina('../pages/blog.html')">Blog</a>
+            </li>
+
+
+            <li>
+                <i class="fa-brands fa-bi bi-bag-heart-fill"></i>
+                <a href="#" onclick="cargarPagina('../pages/shop.html')">Shop</a>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-address-card"></i>
+                <a href="#" onclick="cargarPagina('../pages/contact.html')">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <div class="Contenido" id="contenido">
+
+        <script src="./js/script.js"></script>
+
+</body>
+
+<!-- Aqui va todo lo del footer -->
+
+<footer>
+    <p>Espacio para las redes sociales, enlaces y otros.........</p>
+</footer>
+
+</html>

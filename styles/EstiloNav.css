@@ -1,0 +1,193 @@
+:root {
+    --NavColor: #ffb21d;
+    --NavDisplay: #600796;
+    --NavLetter: #110024;
+    --NavActiveLetter: white;
+    --NavHoverLetter: #ff00b3;
+    --BackgroundGradiaent: linear-gradient(#110024, #0d0b7f)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color:var(--NavColor);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/* Aplicar ancla */
+html {
+    scroll-behavior: smooth;
+}
+
+/* espacio entre el margen superior y las secciones */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/*-----------------*/
+
+.enlace {
+    position: absolute;
+    padding: 10px;
+}
+
+.navbar-logo {
+    margin-top: 5px;
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: var(--NavLetter);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+nav ul li i {
+    color: var(--NavLetter);
+}
+
+li a.active,
+li a:hover {
+    color: var(--NavDisplay);
+    transition: 0.5s;
+}
+
+li a.active,
+li i:hover {
+    color: var(--NavHoverLetter);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    .enlace {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--NavDisplay);
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    nav ul li i {
+        color: var(--NavLetter);
+        margin-left: 20px;
+    }
+
+    li i.active,
+    li i.hover {
+        color: var(--NavHoverLetter);
+        background: none;
+    }
+
+    li i.active,
+    li i.hover {
+        color: var(--NavHoverLetter);
+        margin-left: 20px;
+        transition: 0.5s;
+    }
+
+    li a.active,
+    li a:hover {
+        background: none;
+        color: var(--NavHoverLetter);
+    }
+
+    li a.active,
+    li a:hover {
+        border: none;
+        border-radius: none;
+        transition: 0.5s;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+/* 1 paso estilo para el boton subir */
+.btn-scrolltop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 10px;
+    background: rgb(2, 0, 8);
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: 0.3s;
+}
+
+.btn-scrolltop-on {
+    transform: translateY(0);
+}
+
+/* ---------------------------- */

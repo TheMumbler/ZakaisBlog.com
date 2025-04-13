@@ -1,0 +1,27 @@
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px;
+    margin: 30px;
+}
+
+.row p{
+    text-align: justify;
+}
+
+.container h1{
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 600px) {
+    .row {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+}

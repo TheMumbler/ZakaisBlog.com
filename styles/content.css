@@ -1,0 +1,29 @@
+:root {
+    --NavColor: #ffb21d;
+    --NavDisplay: #600796;
+    --NavLetter: #110024;
+    --NavActiveLetter: white;
+    --NavHoverLetter: #ff00b3;
+    --BackgroundGradiaent: linear-gradient(#110024, #0d0b7f)
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: var(--BackgroundGradiaent);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.Contenido {
+    flex: 1;
+    margin-top: 80px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #818080;
+}
