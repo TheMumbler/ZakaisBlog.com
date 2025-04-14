@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.fullscreen-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-container img {
+  max-width: 35%;
+  max-height: 35%;
+  animation: fadeLoop 2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .fullscreen-container img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+}
+
+@keyframes fadeLoop {
+  0%, 100% { opacity: 0.60; }
+  50% { opacity: 1; }
+}
