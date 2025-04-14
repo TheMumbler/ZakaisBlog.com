@@ -1,9 +1,18 @@
+:root {
+  --NavColor: #ffb21d;
+  --NavDisplay: #600796;
+  --NavLetter: #110024;
+  --NavActiveLetter: white;
+  --NavHoverLetter: #ff00b3;
+  --BackgroundGradiaent: linear-gradient(#110024, #0d0b7f)
+}
+
 .custom-carousel-container {
     width: 40%;
     max-width: 1000px;
     aspect-ratio: 18 / 10;
     margin: 2rem auto;
-    border-radius: 40px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
     display: flex;
@@ -47,6 +56,26 @@
     object-fit: cover;
     display: block;
     background-color: #000;
+  }
+
+  .carousel-order-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: var(--NavColor); /* Color amarillo Bootstrap */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-order-btn:hover {
+    background-color: var(--NavHoverLetter); /* Un tono más oscuro al hacer hover */
   }
   
   @media (max-width: 768px) {

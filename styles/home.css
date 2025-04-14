@@ -1,0 +1,50 @@
+:root {
+    --NavColor: #ffb21d;
+    --NavDisplay: #600796;
+    --NavLetter: #110024;
+    --NavActiveLetter: white;
+    --NavHoverLetter: #ff00b3;
+    --BackgroundGradiaent: linear-gradient(#110024, #0d0b7f);
+  }
+  
+  .highlight-box {
+    background-color: rgba(255, 178, 29, 0.7);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    min-width: 300px;
+    margin: 2rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .highlight-title {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight-text {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  
+  @media (max-width: 768px) {
+    .highlight-box {
+      width: 90%;
+      max-width: 400pt;
+      min-width: 260px;
+      padding: 1.5rem;
+    }
+  }
