@@ -1,27 +1,115 @@
-.row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-    gap: 20px;
-    margin: 30px;
+:root {
+    --NavColor: #ffb21d;
+    --NavDisplay: #600796;
+    --NavLetter: #110024;
+    --NavActiveLetter: white;
+    --NavHoverLetter: #ff00b3;
+    --BackgroundGradiaent: linear-gradient(#110024, #0d0b7f);
 }
 
-.row p{
-    text-align: justify;
-}
-
-.container h1{
+.float-tittle {
     text-align: center;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.1rem;
 }
 
-@media (max-width: 900px) {
-    .row {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+.highlight-title {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 90%;
+}
+
+.contact-image {
+    width: 35%;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .contact-image {
+        width: 65%;
     }
 }
 
-@media (max-width: 600px) {
-    .row {
-        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-    }
+.accordion-container {
+    max-width: 800px;
+    margin: 2rem auto; /* ← Añadido margen arriba y abajo */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* ← Espacio entre acordeones también aumentado */
+}
+
+.accordion-item {
+    background-color: rgba(255, 178, 29, 0.7);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 20px; /* ← Aseguramos que siempre tenga bordes redondeados */
+}
+
+/* Extra: para suavizar las esquinas superiores e inferiores aunque esté expandido */
+.accordion-item:not(.active) {
+    border-radius: 20px;
+}
+
+.accordion-item.active:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.accordion-item.active:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.accordion-header {
+    padding: 1.8rem 2rem; /* ← Más padding para mayor altura */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3rem; /* ← Aumentado tamaño de fuente */
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-header:hover {
+    background-color: var(--NavDisplay); /* Efecto hover */
+    transition: 0.3s
+}
+
+.accordion-toggle {
+    transition: transform 0.3s ease;
+    font-size: 1.5rem; /* ← Más grande el ícono de flecha */
+}
+
+.accordion-item.active .accordion-toggle {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    padding: 1.5rem 2rem; /* ← Más espacio para el contenido */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #fff;
+    display: none;
+}
+
+.accordion-item.active .accordion-body {
+    display: block;
 }

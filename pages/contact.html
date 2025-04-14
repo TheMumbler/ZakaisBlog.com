@@ -6,53 +6,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/content.css">
+    <link rel="stylesheet" href="../styles/contact.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>Bienvenidos a la pagina Nosotros</h1>
-
-        <div class="row">
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cupiditate possimus vero sapiente nisi
-                nobis cum doloremque dignissimos assumenda voluptate, asperiores veniam, autem officiis placeat. Tenetur
-                deserunt sit pariatur molestiae!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic debitis magnam, reprehenderit quod ut
-                deserunt aliquid dolores quae, commodi ab consectetur unde praesentium fugit! Nostrum odio maxime
-                commodi modi.
-            </p>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cupiditate possimus vero sapiente nisi
-                nobis cum doloremque dignissimos assumenda voluptate, asperiores veniam, autem officiis placeat. Tenetur
-                deserunt sit pariatur molestiae!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic debitis magnam, reprehenderit quod ut
-                deserunt aliquid dolores quae, commodi ab consectetur unde praesentium fugit! Nostrum odio maxime
-                commodi modi.
-            </p>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cupiditate possimus vero sapiente nisi
-                nobis cum doloremque dignissimos assumenda voluptate, asperiores veniam, autem officiis placeat. Tenetur
-                deserunt sit pariatur molestiae!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic debitis magnam, reprehenderit quod ut
-                deserunt aliquid dolores quae, commodi ab consectetur unde praesentium fugit! Nostrum odio maxime
-                commodi modi.
-            </p>
-
-
-        </div>
-
+    <!-- Imagen del perrito ese con pijama -->
+<div class="contact-image-container">
+    <img src="image/question.jpg" alt="Imagen de contacto" class="contact-image">
+  </div>
+  
+  <!-- Título suelto -->
+  <div class="float-tittle">
+    <h2 class="highlight-title">CONTACTS AND FREQUENT QUESTIONS</h2>
+  </div>
+  
+  <!-- Acordeón de preguntas recuentes (no son reales) -->
+  <div class="accordion-container">
+    <div class="accordion-item">
+      <div class="accordion-header">
+        How to place an order
+        <span class="accordion-toggle">&#x25BC;</span>
+      </div>
+      <div class="accordion-body">
+        There will be along explanation about a
+            certain problem with comes from the
+            fact that there should not be any sort of
+            phone or internet or electricity for the
+            matter at the time this character is
+            alive. That and the fact that this is not a
+            modern alterner universe so there is no
+            way for this to logically exists.
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <div class="accordion-header">
+        How to actually place an order
+        <span class="accordion-toggle">&#x25BC;</span>
+      </div>
+      <div class="accordion-body">
+        There will be along explanation about a
+            certain problem with comes from the
+            fact that there should not be any sort of
+            phone or internet or electricity for the
+            matter at the time this character is
+            alive. That and the fact that this is not a
+            modern alterner universe so there is no
+            way for this to logically exists.
+      </div>
     </div>
 
+    <div class="accordion-item">
+        <div class="accordion-header">
+          How to actually place an order
+          <span class="accordion-toggle">&#x25BC;</span>
+        </div>
+        <div class="accordion-body">
+          There will be along explanation about a
+              certain problem with comes from the
+              fact that there should not be any sort of
+              phone or internet or electricity for the
+              matter at the time this character is
+              alive. That and the fact that this is not a
+              modern alterner universe so there is no
+              way for this to logically exists.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          How to actually place an order
+          <span class="accordion-toggle">&#x25BC;</span>
+        </div>
+        <div class="accordion-body">
+          There will be along explanation about a
+              certain problem with comes from the
+              fact that there should not be any sort of
+              phone or internet or electricity for the
+              matter at the time this character is
+              alive. That and the fact that this is not a
+              modern alterner universe so there is no
+              way for this to logically exists.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          How to actually place an order
+          <span class="accordion-toggle">&#x25BC;</span>
+        </div>
+        <div class="accordion-body">
+          There will be along explanation about a
+              certain problem with comes from the
+              fact that there should not be any sort of
+              phone or internet or electricity for the
+              matter at the time this character is
+              alive. That and the fact that this is not a
+              modern alterner universe so there is no
+              way for this to logically exists.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          How to actually place an order
+          <span class="accordion-toggle">&#x25BC;</span>
+        </div>
+        <div class="accordion-body">
+          There will be along explanation about a
+              certain problem with comes from the
+              fact that there should not be any sort of
+              phone or internet or electricity for the
+              matter at the time this character is
+              alive. That and the fact that this is not a
+              modern alterner universe so there is no
+              way for this to logically exists.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+            How to understand this is a joke
+          <span class="accordion-toggle">&#x25BC;</span>
+        </div>
+        <div class="accordion-body">
+          XD
+        </div>
+      </div>   
+  </div>
 
 
-
-
-
-
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const headers = document.querySelectorAll('.accordion-header');
+  
+      headers.forEach(header => {
+        header.addEventListener('click', () => {
+          const currentItem = header.parentElement;
+          const isActive = currentItem.classList.contains('active');
+  
+          document.querySelectorAll('.accordion-item').forEach(item => {
+            item.classList.remove('active');
+            const icon = item.querySelector('.accordion-toggle');
+            if (icon) icon.innerHTML = '&#x25BC;';
+          });
+  
+          if (!isActive) {
+            currentItem.classList.add('active');
+            const icon = currentItem.querySelector('.accordion-toggle');
+            if (icon) icon.innerHTML = '&#x25B2;';
+          }
+        });
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
